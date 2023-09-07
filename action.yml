@@ -1,0 +1,15 @@
+name: 'aws-cfn-stack-outputs'
+description: 'Load AWS CloudFormation stack outputs into environment variables'
+inputs:
+  stack:
+    description: 'Name of the CloudFormation stack'
+    required: true
+  prefix:
+    description: 'Variable prefix to use instead of stack name'
+    required: false
+  only:
+    description: 'Comma-separated list of keys'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
